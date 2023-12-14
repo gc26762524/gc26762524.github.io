@@ -23,11 +23,11 @@ Table of Contents
 html {
   /* Colors */
   --white: #ffffff;
-  --black: #ffffff;
-  --grey-400: #ffffff;
-  --grey-500: #ffffff;
-  --grey-600: #ffffff;
-  --gold-500: #ffffff;
+  --black: #000000;
+  --grey-400: #d3d3d3;
+  --grey-500: #808080;
+  --grey-600: #595959;
+  --gold-500: #ffd700;
   --orange-400: #d16e26;
   --orange-500: #cc5500;
   /* Units */
