@@ -24,6 +24,9 @@ html {
   /* Colors */
   --white: #ffffff;
   --black: #000000;
+  --green: #006400;
+  --deepgreen: #195905;
+
   --grey-400: #d3d3d3;
   --grey-500: #808080;
   --grey-600: #595959;
@@ -114,7 +117,7 @@ a#gototop {
   bottom: 15px;
   /* position right based on max width of page content wrapper */
   right: max(15px, calc(15px + ((100vw - var(--page-width)) / 2)));
-  background: var(--orange-500);
+  background: var(--deepgreen);
   color: var(--white);
   padding: 10px;
   box-shadow: 0 0 5px 1px var(--black);
@@ -126,7 +129,7 @@ a#gototop:hover { background: var(--orange-400); }
 
 /* Top Bar Content --------------------------------------------------------- */
 header {
-  background-color: var(--black);
+  background-color: var(--grey-500);
   color: var(--white);
   padding: 20px;
 }
@@ -140,7 +143,8 @@ header .left-content h1 {
 header .left-content span {
   /* scale font to fit text on small screens */
   font-size: clamp(8pt, 3vw, 12pt);
-  color: var(--gold-500);
+  color: var(--deepgreen);
+  font-weight: bold;
 }
 header .right-content {
   margin-bottom: var(--layout-spacing);
@@ -164,8 +168,8 @@ header .right-content {
 
 nav#top-nav {
   line-height: 1.5em;
-  background: var(--orange-500);
-  box-shadow: 0 0 5px 1px var(--black);
+  background: var(--grey-600);
+  box-shadow: 0 0 5px 1px var(--gray-500);
   color: var(--white);
   padding: var(--layout-spacing) calc(var(--layout-spacing) * 2);
   /* box shadow bugfix - render shadow above next section */
@@ -180,6 +184,7 @@ nav#top-nav {
   gap: var(--layout-spacing);
 }
 
+/* top right image navigation box */
 #top-nav-menu-btn {
   --size: 32px;
   cursor: pointer;
