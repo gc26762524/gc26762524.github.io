@@ -24,12 +24,13 @@ html {
   /* Colors */
   --white: #ffffff;
   --black: #000000;
-  --green: #006400;
-  --deepgreen: #195905;
+  --green: #8ccaaa;
+  --deepgreen: #17750e;
 
-  --grey-400: #eff7eb;
-  --grey-500: #ffffff;
-  --grey-600: #006400;
+  --grey-300: #595757;
+  --grey-200: #f5f5f2;
+  --grey-100: #fafafa;
+  --grey-600: #474747;
   --gold-500: #ffd700;
   --orange-400: #d16e26;
   --orange-500: #cc5500;
@@ -143,7 +144,7 @@ header .left-content h1 {
 header .left-content span {
   /* scale font to fit text on small screens */
   font-size: clamp(8pt, 3vw, 12pt);
-  color: var(--deepgreen);
+  color: var(--black);
   font-weight: bold;
 }
 header .right-content {
@@ -169,7 +170,7 @@ header .right-content {
 nav#top-nav {
   line-height: 1.5em;
   background: var(--grey-600);
-  box-shadow: 0 0 5px 1px var(--gray-500);
+  box-shadow: 0 0 5px 1px var(--grey-500);
   color: var(--white);
   padding: var(--layout-spacing) calc(var(--layout-spacing) * 2);
   /* box shadow bugfix - render shadow above next section */
@@ -235,7 +236,7 @@ section {
 /* small screen background variation - every other section is white */
 section:nth-of-type(2n),
 #sidebar section:nth-of-type(2n) {
-  background: var(--grey-400);
+  background: var(--grey-200);
 }
 
 section > :not(:last-child) {
@@ -250,7 +251,7 @@ section > :not(:last-child) {
   position: relative;
   height: 400px;
   overflow: hidden;
-  background: var(--grey-400);
+  background: var(--grey-200);
 }
 
 #highlights .highlight {
@@ -370,7 +371,7 @@ section > :not(:last-child) {
 
 .control svg {
   width: 48px; height: 48px;
-  fill: var(--grey-400);
+  fill: var(--grey-200);
 }
 
 
@@ -482,7 +483,7 @@ footer {
   /* Update Background */
   body { background: var(--grey-500); }
   #bg span { opacity: 0.05; }
-  #bg span:nth-of-type(2n-1) { background: var(--grey-400); }
+  #bg span:nth-of-type(2n-1) { background: var(--grey-200); }
 
   /* Update Top Nav */
   /* hide menu button and decorative line */
@@ -507,7 +508,7 @@ footer {
     list-style-type: none;
     padding-left: 0;
   }
-  #top-nav-links a { font-size: 1em; }
+  #top-nav-links a { font-size: 1.1em; }
 
   /* Update Page Layout */
   #page-content {
@@ -551,9 +552,10 @@ footer {
   /* unset mobile alternating background colors */
   section:nth-of-type(2n-1),
   #sidebar section:nth-of-type(2n-1) {
-    background: var(--grey-400);
+    background: var(--grey-200);
   }
   /* Highlights Carousel animation - dim controls on highlight hover */
   #highlights .highlight:hover ~ #highlights-counter { opacity: 0.25; }
   #highlights .highlight:hover ~ .control { opacity: 0.25; }
 }
+
