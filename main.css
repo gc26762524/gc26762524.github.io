@@ -468,6 +468,58 @@ section > :not(:last-child) {
 #past-seminars .seminar-title { font-size: 8pt; }
 
 
+/* ------------------------------------------------------------------------
+   Lab Activities Slider
+   ------------------------------------------------------------------------ */
+
+/* 整体容器 */
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 视口 */
+.slider-window {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* 水平列表 */
+.slider-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transition: transform 0.4s ease;
+}
+
+/* 每项宽度：100%（一次显示一张）*/
+.slider-list li {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+.slider-list img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 左右按钮 */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.7);
+  border: none;
+  font-size: 1.5em;
+  padding: 0.2em 0.5em;
+  cursor: pointer;
+  z-index: 10;
+}
+.slider-btn.left  { left: 0.5em; }
+.slider-btn.right { right: 0.5em; }
+
+
 /* Footer ------------------------------------------------------------------ */
 footer {
   background-color: var(--black);
