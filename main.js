@@ -333,3 +333,44 @@ class HighlightsCarousel {
 
 // add carousel object to page
 new HighlightsCarousel();
+
+
+// Lab Activities Slider ---------------------------------------------------
+// 等 DOM 全部加载完再执行
+document.addEventListener('DOMContentLoaded', () => {
+  const list = document.querySelector('.slider-list');
+  const items = list ? list.children : [];
+  const total = items.length;
+  let idx = 0;
+
+  if (!list || total < 1) return;  // 没有列表或没图片就跳过
+
+  // 根据当前 idx 更新平移
+  function updateSlider() {
+    list.style.transform = `translateX(${-idx * 100}%)`;
+  }
+
+  // 点击“左”按钮
+  const btnLeft = document.querySelector('.slider-btn.left');
+  if (btnLeft) {
+    btnLeft.addEventListener('click', () => {
+      idx = (idx - 1 + total) % total;
+      updateSlider();
+    });
+  }
+
+  // 点击“右”按钮
+  const btnRight = document.querySelector('.slider-btn.right');
+  if (btnRight) {
+    btnRight.addEventListener('click', () => {
+      idx = (idx + 1) % total;
+      updateSlider();
+    });
+  }
+
+  // （可选）自动轮播，每隔 5 秒右滑一次
+  setInterval(() => {
+    idx = (idx + 1) % total;
+    updateSlider();
+  }, 5000);
+});
